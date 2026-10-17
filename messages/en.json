@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact",
+    "hireMe": "Hire me",
+    "downloadCv": "Download CV"
+  },
+  "hero": {
+    "badge": "Available for Technical Leadership, Consulting & High-Impact Projects",
+    "ctaContact": "Contact me",
+    "ctaProjects": "View projects",
+    "ctaCv": "Download CV"
+  },
+  "metrics": {
+    "badge": "Impact",
+    "title": "Engineering impact at scale"
+  },
+  "skills": {
+    "badge": "Stack",
+    "title": "Technical arsenal",
+    "subtitle": "Filter by architecture layer. Every skill is production-proven across SaaS, fintech, and clinic systems.",
+    "all": "All",
+    "languages": "Core languages",
+    "frontend": "Frontend & mobile",
+    "backend": "Backend & APIs",
+    "databases": "Databases & caching",
+    "devops": "DevOps & architecture"
+  },
+  "projects": {
+    "badge": "Case studies",
+    "title": "Flagship engineering work",
+    "subtitle": "Architecture, ownership, and delivery across multi-tenant SaaS, CRM, fintech, and clinic platforms.",
+    "viewAll": "All projects",
+    "viewCase": "View case study",
+    "challenge": "Engineering challenge",
+    "solution": "Architectural solution",
+    "role": "My role",
+    "stack": "Tech stack",
+    "features": "Highlights",
+    "live": "Live product"
+  },
+  "experience": {
+    "badge": "Career",
+    "title": "Leadership & delivery timeline",
+    "subtitle": "From backend APIs to technical leadership across Tarqumi, Ashour Group, 7p, and freelance systems."
+  },
+  "education": {
+    "badge": "Credentials",
+    "title": "Education, honors & certifications",
+    "subtitle": "Academic foundation plus nationwide software recognition."
+  },
+  "resume": {
+    "badge": "Interactive resume",
+    "title": "Dual-track professional CV",
+    "subtitle": "Switch between Full-Stack leadership and Frontend-focused tracks. Print or download a clean A4 PDF.",
+    "fullstack": "Full-Stack / Technical Lead",
+    "frontend": "Frontend / Technical Lead",
+    "print": "Print / Download A4 PDF",
+    "openHtml": "Open printable HTML"
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Start a technical conversation",
+    "subtitle": "Leadership consulting, architecture reviews, or high-impact product builds.",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "company": "Company",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Message received. I will reply shortly.",
+    "error": "Something went wrong. Try WhatsApp or email directly.",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "emailLabel": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "tagline": "Technical Lead & Full-Stack Software Engineer at Tarqumi",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading..."
+  }
+}

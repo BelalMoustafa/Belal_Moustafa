@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belal Moustafa — Full-Stack Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    html {
+      font-size: 10pt;
+    }
+
+    body {
+      font-family: "Inter", "Roboto", Arial, sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.45;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 15mm;
+    }
+
+    a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      text-align: center;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #111;
+      margin-bottom: 16px;
+    }
+
+    .cv-header h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .cv-header .title {
+      font-size: 11pt;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 18px;
+      font-size: 9pt;
+      color: #222;
+    }
+
+    .contact-row span,
+    .contact-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .contact-row i {
+      font-size: 8.5pt;
+      width: 12px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    .summary p {
+      font-size: 10pt;
+      color: #222;
+      text-align: justify;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .skill-row {
+      font-size: 9.5pt;
+      line-height: 1.5;
+    }
+
+    .skill-row strong {
+      font-weight: 600;
+    }
+
+    /* ── Experience & Projects ── */
+    .entry {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px 12px;
+      margin-bottom: 3px;
+    }
+
+    .entry-header .role-company {
+      font-size: 10.5pt;
+      font-weight: 600;
+    }
+
+    .entry-header .dates {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .entry-subtitle {
+      font-size: 9.5pt;
+      font-style: italic;
+      color: #444;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 18px;
+    }
+
+    li {
+      font-size: 9.5pt;
+      margin-bottom: 3px;
+      color: #222;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    li strong {
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* ── Education ── */
+    .edu-entry {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    .edu-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-line {
+      font-size: 10pt;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 9.5pt;
+      color: #333;
+    }
+
+    /* ── Honors ── */
+    .honors-list li {
+      font-size: 9.5pt;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        color: black;
+        background: white;
+        padding: 0;
+        max-width: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .entry,
+      .edu-entry,
+      .cv-header {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      h2 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cv-header">
+    <h1>Belal Moustafa</h1>
+    <p class="title">Full-Stack Software Engineer / Technical Lead</p>
+    <div class="contact-row">
+      <span><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</span>
+      <a href="tel:+201157167417"><i class="fa-solid fa-phone"></i> +20 115 716 7417</a>
+      <a href="mailto:belalmoustafa65@gmail.com"><i class="fa-solid fa-envelope"></i> belalmoustafa65@gmail.com</a>
+      <a href="https://github.com/BelalMoustafa" target="_blank"><i class="fa-brands fa-github"></i> github.com/BelalMoustafa</a>
+      <a href="https://linkedin.com/in/belal-moustafa30" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/belal-moustafa30</a>
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>Professional Summary</h2>
+    <p>
+      Results-driven Full-Stack Software Engineer and Technical Lead with over 3 years of experience architecting and delivering end-to-end, highly scalable systems. Demonstrated success in leading cross-functional teams of up to 15 members and deploying 55+ production projects handling 10,000+ concurrent users. Deep expertise in bridging robust backends (<strong>NestJS</strong>, <strong>Laravel</strong>, <strong>PostgreSQL</strong>) with modern, responsive frontends (<strong>Next.js</strong>, <strong>Flutter</strong>, <strong>Expo</strong>), alongside streamlining operations via <strong>Docker</strong> and <strong>CI/CD</strong> pipelines.
+    </p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><strong>Core Stack:</strong> TypeScript, PHP, JavaScript, Dart, Java</div>
+      <div class="skill-row"><strong>Backend &amp; APIs:</strong> NestJS, Laravel, Node.js, RESTful APIs, Socket.io, Sanctum</div>
+      <div class="skill-row"><strong>Frontend &amp; Mobile:</strong> Next.js, React, Flutter, Expo, Tailwind CSS, Zustand, Riverpod</div>
+      <div class="skill-row"><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis, Prisma ORM</div>
+      <div class="skill-row"><strong>DevOps &amp; Architecture:</strong> Docker, GitHub Actions, Nginx, Linux (Ubuntu VPS), Monorepo (Turbo), Multi-tenant Architecture</div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <h2>Work Experience</h2>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">Tarqumi — Technical Lead &amp; Full-Stack Engineer</span>
+        <span class="dates">Feb 2026 – Present</span>
+      </div>
+      <ul>
+        <li>Led full-stack architecture across a cross-functional team of 15 developers, overseeing end-to-end system design from database layer to client interfaces.</li>
+        <li>Ensured seamless integration between complex APIs and frontend clients across 55+ production projects, maintaining consistency and reliability at scale.</li>
+        <li>Implemented automated <strong>CI/CD</strong> pipelines via <strong>GitHub Actions</strong> and <strong>Docker</strong>, enabling rapid, zero-downtime deployments for platforms serving 10,000+ concurrent users.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">Ashour Group — Head of Software Team &amp; Software Board Member</span>
+        <span class="dates">Feb 2025 – May 2026</span>
+      </div>
+      <ul>
+        <li>Directed the full-stack technical roadmap, aligning frontend and backend development with business objectives and long-term product strategy.</li>
+        <li>Standardized both frontend (<strong>React</strong>, <strong>Next.js</strong>) and backend (<strong>Laravel</strong>) development practices, establishing shared coding standards and architectural patterns.</li>
+        <li>Led architectural reviews and code quality initiatives, ensuring high performance, security, and maintainability across all company products.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">Ashour Group — Full Stack Developer</span>
+        <span class="dates">Dec 2024 – Feb 2025</span>
+      </div>
+      <ul>
+        <li>Developed and maintained full-stack applications using <strong>Laravel</strong>, <strong>Next.js</strong>, and <strong>PostgreSQL</strong>, delivering cohesive end-to-end product features.</li>
+        <li>Integrated third-party APIs and payment gateways, ensuring seamless data flow between backend services and responsive client interfaces.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">7p — Backend Developer</span>
+        <span class="dates">Jul 2024 – Oct 2024</span>
+      </div>
+      <ul>
+        <li>Engineered robust backend APIs and microservices using <strong>PHP</strong>/<strong>Laravel</strong> and <strong>MySQL</strong>.</li>
+        <li>Streamlined data processing and API response times with <strong>Redis</strong> caching and optimized server configurations.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">Freelance — Software Engineer</span>
+        <span class="dates">2023 – Present</span>
+      </div>
+      <ul>
+        <li>Delivered custom end-to-end web and mobile solutions for international clients, covering database design, API development, and frontend implementation.</li>
+        <li>Built complete product stacks using <strong>NestJS</strong>, <strong>Laravel</strong>, <strong>Next.js</strong>, and <strong>Flutter</strong>, with deployment on <strong>Linux VPS</strong> via <strong>Docker</strong> and <strong>Nginx</strong>.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="projects">
+    <h2>Key Projects</h2>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">W Omnichannel Hub (w-Hub) — SaaS Platform</span>
+      </div>
+      <ul>
+        <li>Built a multi-tenant WhatsApp SaaS using a <strong>NestJS</strong>, <strong>Next.js</strong>, and <strong>Expo</strong> Monorepo (<strong>Turbo</strong>). Implemented real-time <strong>Socket.io</strong> chat inboxes and configured robust RBAC with <strong>PostgreSQL</strong> and <strong>Prisma</strong>.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">Care Synq (e-Hub CRM) — Marketing &amp; Clinic Operations</span>
+      </div>
+      <ul>
+        <li>Developed a modular multi-tenant <strong>Laravel</strong> backend and a cross-platform <strong>Flutter</strong> client. Automated activity lifecycles using <strong>Laravel Scheduler</strong> and <strong>Redis</strong>, with CI/CD via <strong>GitHub Actions</strong>.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">MetaTrader — Fintech Investment Platform</span>
+      </div>
+      <ul>
+        <li>Engineered a full-stack fintech platform combining a <strong>Laravel</strong> API, <strong>Next.js</strong> Admin dashboard, and <strong>Flutter</strong> Mobile App to manage real bank transfers and daily ROI cycles.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">AIM — Investment Tracking Platform</span>
+      </div>
+      <ul>
+        <li>Developed a bilingual (EN/AR) investment platform with a <strong>Next.js</strong> frontend and <strong>Laravel</strong> backend. Integrated multi-gateway payouts (PayMint, Binance) and automated withdrawal batches.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <span class="role-company">Clinova — Comprehensive Clinic Management System</span>
+      </div>
+      <ul>
+        <li>Architected and built an end-to-end comprehensive clinic management system, from database design and secure APIs to intuitive patient booking interfaces.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+
+    <div class="edu-entry">
+      <p class="edu-line">October Technological University</p>
+      <p class="edu-detail">B.Sc. in Information Technology (CS Major) — 2024 – Expected 2028 (Currently in 3rd Year)</p>
+    </div>
+
+    <div class="edu-entry">
+      <p class="edu-line">WE Applied Technology School</p>
+      <p class="edu-detail">Diploma in Web Development &amp; Programming — 2021 – 2024</p>
+    </div>
+  </section>
+
+  <section class="honors">
+    <h2>Honors &amp; Certifications</h2>
+    <ul class="honors-list">
+      <li>2nd Place Nationwide in Software — Egypt Science and Engineering Fair (ESIF).</li>
+      <li>Samsung Innovation Campus Certification.</li>
+      <li>Multiple Certifications from BIM.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

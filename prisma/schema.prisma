@@ -1,0 +1,130 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  titleEn     String
+  titleAr     String
+  summaryEn   String
+  summaryAr   String
+  challengeEn String   @default("")
+  challengeAr String   @default("")
+  solutionEn  String   @default("")
+  solutionAr  String   @default("")
+  roleEn      String   @default("")
+  roleAr      String   @default("")
+  featuresEn  String   @default("[]")
+  featuresAr  String   @default("[]")
+  categoryEn  String   @default("")
+  categoryAr  String   @default("")
+  techStack   String   @default("[]")
+  coverImage  String?
+  gallery     String   @default("[]")
+  liveUrl     String?
+  /// fullstack | frontend | both
+  track       String   @default("both")
+  isFeatured  Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  seoTitleEn  String?
+  seoTitleAr  String?
+  seoDescEn   String?
+  seoDescAr   String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Experience {
+  id          String   @id @default(cuid())
+  companyEn   String
+  companyAr   String
+  roleEn      String
+  roleAr      String
+  locationEn  String   @default("Cairo, Egypt")
+  locationAr  String   @default("القاهرة، مصر")
+  startLabel  String
+  endLabel    String
+  bulletsEn   String   @default("[]")
+  bulletsAr   String   @default("[]")
+  /// fullstack | frontend | both
+  track       String   @default("both")
+  sortOrder   Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Skill {
+  id        String   @id @default(cuid())
+  name      String
+  /// languages | frontend | backend | databases | devops
+  category  String
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Honor {
+  id        String   @id @default(cuid())
+  titleEn   String
+  titleAr   String
+  orgEn     String   @default("")
+  orgAr     String   @default("")
+  detailEn  String   @default("")
+  detailAr  String   @default("")
+  /// education | award | cert
+  kind      String   @default("award")
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Metric {
+  id        String   @id @default(cuid())
+  labelEn   String
+  labelAr   String
+  value     String
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  subject   String?
+  message   String
+  /// New | Read | Archived
+  status    String   @default("New")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @default("{}")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
