@@ -1,31 +1,10 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { getSetting, type ProfileSettings } from "@/lib/settings";
+import { defaultProfile, getSetting } from "@/lib/settings";
 import { siteUrl } from "@/lib/utils";
 
 export async function GET() {
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "Technical Lead & Full-Stack / Frontend Software Engineer",
-    titleAr: "",
-    locationEn: "Cairo, Egypt",
-    locationAr: "",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
-    github: "https://github.com/BelalMoustafa",
-    companyUrl: "https://tarqumi.com",
-    photo: "/uploads/profile/belal-moustafa.png",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "",
-    cvFrontend: "",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   const projects = await prisma.project.findMany({
     where: { published: true },

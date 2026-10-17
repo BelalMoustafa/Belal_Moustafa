@@ -14,7 +14,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { JsonLd } from "@/components/JsonLd";
 import { personJsonLd } from "@/lib/seo";
-import { getSetting, type ProfileSettings } from "@/lib/settings";
+import { defaultProfile, getSetting } from "@/lib/settings";
 import "../globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -44,7 +44,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://belalmoustafa.tarqumi.com",
   ),
-  icons: { icon: "/uploads/profile/belal-moustafa.png" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/favicon-192.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default async function LocaleLayout({
@@ -59,28 +66,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "Technical Lead & Full-Stack Software Engineer",
-    titleAr: "",
-    locationEn: "Cairo, Egypt",
-    locationAr: "",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
-    github: "https://github.com/BelalMoustafa",
-    companyUrl: "https://tarqumi.com",
-    photo: "/uploads/profile/belal-moustafa.png",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "",
-    cvFrontend: "",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   return (
     <html

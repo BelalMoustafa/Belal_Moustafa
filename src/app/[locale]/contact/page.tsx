@@ -9,7 +9,7 @@ import {
   WhatsAppIcon,
 } from "@/components/ui/BrandIcons";
 import { alternates } from "@/lib/seo";
-import { getSetting, type ProfileSettings, type SeoSettings } from "@/lib/settings";
+import { defaultProfile, getSetting, type SeoSettings } from "@/lib/settings";
 import type { AppLocale } from "@/i18n/routing";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -32,28 +32,7 @@ export default async function ContactPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("contact");
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "",
-    titleAr: "",
-    locationEn: "Cairo, Egypt",
-    locationAr: "القاهرة، مصر",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
-    github: "https://github.com/BelalMoustafa",
-    companyUrl: "https://tarqumi.com",
-    photo: "",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "",
-    cvFrontend: "",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   const channels = [
     {

@@ -19,8 +19,15 @@ export type ProfileSettings = {
   availabilityAr: string;
   summaryEn: string;
   summaryAr: string;
+  summaryFullstackEn: string;
+  summaryFullstackAr: string;
+  summaryFrontendEn: string;
+  summaryFrontendAr: string;
+  summaryBackendEn: string;
+  summaryBackendAr: string;
   cvFullstack: string;
   cvFrontend: string;
+  cvBackend: string;
 };
 
 export type SeoPage = {
@@ -35,6 +42,37 @@ export type SeoSettings = {
   projects?: SeoPage;
   resume?: SeoPage;
   contact?: SeoPage;
+};
+
+export const defaultProfile: ProfileSettings = {
+  nameEn: "Belal Moustafa",
+  nameAr: "بلال مصطفى",
+  titleEn: "Technical Lead & Full-Stack / Frontend Software Engineer",
+  titleAr: "قائد تقني ومهندس برمجيات متكامل / واجهات",
+  locationEn: "Cairo, Egypt",
+  locationAr: "القاهرة، مصر",
+  email: "belalmoustafa65@gmail.com",
+  phone: "+201157167417",
+  phoneDisplay: "+20 115 716 7417",
+  whatsapp: "201157167417",
+  linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
+  github: "https://github.com/BelalMoustafa",
+  companyUrl: "https://tarqumi.com",
+  photo: "/uploads/profile/belal-moustafa.jpg",
+  availabilityEn:
+    "Available for Technical Leadership, Consulting & High-Impact Projects",
+  availabilityAr: "متاح للقيادة التقنية والاستشارات والمشاريع عالية الأثر",
+  summaryEn: "",
+  summaryAr: "",
+  summaryFullstackEn: "",
+  summaryFullstackAr: "",
+  summaryFrontendEn: "",
+  summaryFrontendAr: "",
+  summaryBackendEn: "",
+  summaryBackendAr: "",
+  cvFullstack: "/cv/belal-moustafa-fullstack.pdf",
+  cvFrontend: "/cv/belal-moustafa-frontend.pdf",
+  cvBackend: "/cv/belal-moustafa-backend.pdf",
 };
 
 export async function getSetting<T>(key: string, fallback: T): Promise<T> {

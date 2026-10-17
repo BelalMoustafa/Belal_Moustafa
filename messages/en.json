@@ -53,11 +53,13 @@
   },
   "resume": {
     "badge": "Interactive resume",
-    "title": "Dual-track professional CV",
-    "subtitle": "Switch between Full-Stack leadership and Frontend-focused tracks. Print or download a clean A4 PDF.",
+    "title": "Triple-track professional CV",
+    "subtitle": "Switch between Full-Stack, Frontend, and Backend leadership tracks. Print or download the matching A4 PDF.",
     "fullstack": "Full-Stack / Technical Lead",
     "frontend": "Frontend / Technical Lead",
-    "print": "Print / Download A4 PDF",
+    "backend": "Backend / Technical Lead",
+    "print": "Print A4",
+    "downloadPdf": "Download PDF",
     "openHtml": "Open printable HTML"
   },
   "contact": {

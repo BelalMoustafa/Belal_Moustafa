@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { prisma } from "@/lib/prisma";
 import { parseJsonArray } from "@/lib/utils";
 import { alternates } from "@/lib/seo";
-import { getSetting, type ProfileSettings, type SeoSettings } from "@/lib/settings";
+import { defaultProfile, getSetting, type SeoSettings } from "@/lib/settings";
 import type { AppLocale } from "@/i18n/routing";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { SkillsMatrix } from "@/components/home/SkillsMatrix";
@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: isAr ? page?.titleAr : page?.titleEn,
       description: isAr ? page?.descriptionAr : page?.descriptionEn,
-      images: ["/uploads/profile/belal-moustafa.png"],
+      images: ["/uploads/profile/belal-moustafa.jpg"],
     },
   };
 }
@@ -38,29 +38,7 @@ export default async function HomePage({
   const t = await getTranslations();
   const isAr = locale === "ar";
 
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "Technical Lead & Full-Stack / Frontend Software Engineer",
-    titleAr: "قائد تقني ومهندس برمجيات متكامل",
-    locationEn: "Cairo, Egypt",
-    locationAr: "القاهرة، مصر",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
-    github: "https://github.com/BelalMoustafa",
-    companyUrl: "https://tarqumi.com",
-    photo: "/uploads/profile/belal-moustafa.png",
-    availabilityEn:
-      "Available for Technical Leadership, Consulting & High-Impact Projects",
-    availabilityAr: "متاح للقيادة التقنية والاستشارات والمشاريع عالية الأثر",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "/cv/belal-moustafa-cv-fullstack.html",
-    cvFrontend: "/cv/belal-moustafa-cv.html",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   const [metrics, skills, projects, experiences, honors] = await Promise.all([
     prisma.metric.findMany({ orderBy: { sortOrder: "asc" } }),

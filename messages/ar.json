@@ -53,11 +53,13 @@
   },
   "resume": {
     "badge": "سيرة تفاعلية",
-    "title": "سيرة ذاتية بمسارين",
-    "subtitle": "بدّل بين مسار Full-Stack القيادي ومسار Frontend. اطبع أو حمّل PDF بحجم A4.",
+    "title": "سيرة ذاتية بثلاثة مسارات",
+    "subtitle": "بدّل بين مسارات Full-Stack وFrontend وBackend. اطبع أو حمّل ملف PDF المطابق بحجم A4.",
     "fullstack": "Full-Stack / قائد تقني",
     "frontend": "Frontend / قائد تقني",
-    "print": "طباعة / تحميل PDF A4",
+    "backend": "Backend / قائد تقني",
+    "print": "طباعة A4",
+    "downloadPdf": "تحميل PDF",
     "openHtml": "فتح HTML للطباعة"
   },
   "contact": {

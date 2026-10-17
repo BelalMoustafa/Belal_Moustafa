@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { alternates } from "@/lib/seo";
-import { getSetting, type ProfileSettings, type SeoSettings } from "@/lib/settings";
+import { defaultProfile, getSetting, type SeoSettings } from "@/lib/settings";
 import type { AppLocale } from "@/i18n/routing";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { ResumeView } from "@/components/resume/ResumeView";
@@ -29,28 +29,7 @@ export default async function ResumePage({
   const t = await getTranslations("resume");
   const isAr = locale === "ar";
 
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "",
-    titleAr: "",
-    locationEn: "Cairo, Egypt",
-    locationAr: "القاهرة، مصر",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
-    github: "https://github.com/BelalMoustafa",
-    companyUrl: "https://tarqumi.com",
-    photo: "/uploads/profile/belal-moustafa.png",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "/cv/belal-moustafa-cv-fullstack.html",
-    cvFrontend: "/cv/belal-moustafa-cv.html",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   const [experiences, projects, honors, skills] = await Promise.all([
     prisma.experience.findMany({

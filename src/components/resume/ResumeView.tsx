@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Printer } from "lucide-react";
+import { Download, Printer } from "lucide-react";
 import { parseJsonArray } from "@/lib/utils";
+
+type Track = "fullstack" | "frontend" | "backend";
 
 type Experience = {
   id: string;
@@ -51,8 +53,19 @@ type Profile = {
   github: string;
   cvFullstack: string;
   cvFrontend: string;
-  summaryEn: string;
-  summaryAr: string;
+  cvBackend: string;
+  summaryFullstackEn: string;
+  summaryFullstackAr: string;
+  summaryFrontendEn: string;
+  summaryFrontendAr: string;
+  summaryBackendEn: string;
+  summaryBackendAr: string;
+};
+
+const TITLES: Record<Track, string> = {
+  fullstack: "Full-Stack Software Engineer / Technical Lead",
+  frontend: "Frontend Software Engineer / Technical Lead",
+  backend: "Backend Software Engineer / Technical Lead",
 };
 
 export function ResumeView({
@@ -71,13 +84,10 @@ export function ResumeView({
   skillsByCategory: Record<string, string[]>;
 }) {
   const t = useTranslations("resume");
-  const [track, setTrack] = useState<"fullstack" | "frontend">("fullstack");
+  const [track, setTrack] = useState<Track>("fullstack");
 
   const filteredExp = useMemo(
-    () =>
-      experiences.filter(
-        (e) => e.track === "both" || e.track === track || (track === "fullstack" && e.track === "fullstack"),
-      ),
+    () => experiences.filter((e) => e.track === "both" || e.track === track),
     [experiences, track],
   );
 
@@ -86,36 +96,47 @@ export function ResumeView({
     [projects, track],
   );
 
-  const title =
-    track === "fullstack"
-      ? "Full-Stack Software Engineer / Technical Lead"
-      : "Frontend Software Engineer / Technical Lead";
+  const summary = useMemo(() => {
+    if (track === "frontend") {
+      return isAr ? profile.summaryFrontendAr : profile.summaryFrontendEn;
+    }
+    if (track === "backend") {
+      return isAr ? profile.summaryBackendAr : profile.summaryBackendEn;
+    }
+    return isAr ? profile.summaryFullstackAr : profile.summaryFullstackEn;
+  }, [track, profile, isAr]);
+
+  const cvHref =
+    track === "frontend"
+      ? profile.cvFrontend
+      : track === "backend"
+        ? profile.cvBackend
+        : profile.cvFullstack;
+
+  const skillKeys =
+    track === "frontend"
+      ? ["frontend", "languages", "devops", "backend"]
+      : track === "backend"
+        ? ["backend", "languages", "databases", "devops", "frontend"]
+        : ["languages", "backend", "frontend", "databases", "devops"];
 
   return (
     <div>
       <div className="no-print mb-8 flex flex-wrap items-center justify-center gap-3">
-        <button
-          type="button"
-          onClick={() => setTrack("fullstack")}
-          className={`rounded-full border px-4 py-2 text-sm font-semibold ${
-            track === "fullstack"
-              ? "border-[#0066FF] bg-[#0066FF] text-white"
-              : "border-bm-border bg-bm-card text-bm-muted"
-          }`}
-        >
-          {t("fullstack")}
-        </button>
-        <button
-          type="button"
-          onClick={() => setTrack("frontend")}
-          className={`rounded-full border px-4 py-2 text-sm font-semibold ${
-            track === "frontend"
-              ? "border-[#0066FF] bg-[#0066FF] text-white"
-              : "border-bm-border bg-bm-card text-bm-muted"
-          }`}
-        >
-          {t("frontend")}
-        </button>
+        {(["fullstack", "frontend", "backend"] as Track[]).map((key) => (
+          <button
+            key={key}
+            type="button"
+            onClick={() => setTrack(key)}
+            className={`rounded-full border px-4 py-2 text-sm font-semibold ${
+              track === key
+                ? "border-[#0066FF] bg-[#0066FF] text-white"
+                : "border-bm-border bg-bm-card text-bm-muted"
+            }`}
+          >
+            {t(key)}
+          </button>
+        ))}
         <button
           type="button"
           onClick={() => window.print()}
@@ -125,12 +146,13 @@ export function ResumeView({
           {t("print")}
         </button>
         <a
-          href={track === "fullstack" ? profile.cvFullstack : profile.cvFrontend}
+          href={cvHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-bm-border bg-bm-card px-4 py-2 text-sm font-semibold text-bm-fg"
+          className="inline-flex items-center gap-2 rounded-full border border-bm-border bg-bm-card px-4 py-2 text-sm font-semibold text-bm-fg"
         >
-          {t("openHtml")}
+          <Download className="h-4 w-4" />
+          {t("downloadPdf")}
         </a>
       </div>
 
@@ -140,7 +162,7 @@ export function ResumeView({
             {isAr ? profile.nameAr : profile.nameEn}
           </h1>
           <p className="mt-1 text-base font-medium text-slate-700 dark:text-bm-muted">
-            {title}
+            {TITLES[track]}
           </p>
           <p className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-bm-muted">
             <span>{isAr ? profile.locationAr : profile.locationEn}</span>
@@ -162,7 +184,7 @@ export function ResumeView({
             Professional Summary
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-bm-muted">
-            {isAr ? profile.summaryAr : profile.summaryEn}
+            {summary}
           </p>
         </section>
 
@@ -171,11 +193,14 @@ export function ResumeView({
             Skills
           </h2>
           <div className="mt-2 space-y-1 text-sm">
-            {Object.entries(skillsByCategory).map(([cat, names]) => (
-              <p key={cat}>
-                <strong className="capitalize">{cat}:</strong> {names.join(", ")}
-              </p>
-            ))}
+            {skillKeys
+              .filter((cat) => skillsByCategory[cat]?.length)
+              .map((cat) => (
+                <p key={cat}>
+                  <strong className="capitalize">{cat}:</strong>{" "}
+                  {skillsByCategory[cat].join(", ")}
+                </p>
+              ))}
           </div>
         </section>
 

@@ -1,0 +1,235 @@
+===== Belal Moustafa — Frontend Software Engineer.pdf =====
+Belal Moustafa
+Frontend Software Engineer / Technical Lead
+ Cairo, Egypt  +20 115 716 7417 ✉ belalmoustafa65@gmail.com  github.com/BelalMoustafa
+ linkedin.com/in/belal-moustafa30
+PROFESSIONAL SUMMARY
+Results-driven Frontend Software Engineer and Technical Lead with over 3 years of experience in building
+high-performance, responsive web applications and cross-platform mobile apps. Proven expertise in
+leading frontend architectures for complex platforms handling 10,000+ concurrent users. Highly skilled in
+modern frameworks including Next.js, React, and Flutter, with a strong focus on state management
+(Zustand, Riverpod), UI/UX optimization, multi-language support (i18n), and seamless API integrations.
+SKILLS
+Frontend & Mobile: Next.js, React, Flutter, Expo, Tailwind CSS, Zustand, Riverpod, TanStack Query
+Languages: TypeScript, JavaScript, PHP, Java, Dart
+Architecture & Tools: UI/UX Optimization, WebSockets (Socket.io), i18n (next-intl), Monorepo (Turbo), Responsive
+Design
+Backend & DevOps: NestJS, Laravel, Docker, GitHub Actions, Linux
+WORK EXPERIENCE
+Tarqumi — Technical Lead & Frontend Engineer Feb 2026 – Present
+Led frontend architecture across a cross-functional team of 15 developers, establishing reusable UI
+component standards and design system conventions.
+Ensured cross-platform mobile and web parity across 55+ production projects, delivering highly optimized
+user experiences at scale.
+Directed frontend technical delivery for platforms serving 10,000+ concurrent users, prioritizing performance,
+accessibility, and responsive design.
+Ashour Group — Head of Software Team & Software Board Member Feb 2025 – May 2026
+Drove adoption of the frontend tech stack (React, Next.js), defining architectural standards and tooling for the
+engineering department.
+Mentored developers on modern state management patterns and component-driven development, elevating
+code quality across all products.
+Ensured pixel-perfect UI delivery through rigorous design reviews, cross-browser testing, and consistent
+frontend best practices.
+Ashour Group — Full Stack Developer Dec 2024 – Feb 2025
+Developed complex client-side applications using Next.js, consuming RESTful APIs to deliver fast, interactive
+user interfaces.
+Dramatically improved UI responsiveness through optimized rendering strategies, efficient data fetching, and
+streamlined component architecture.
+Freelance — Software Engineer 2023 – Present
+Designed and delivered custom, pixel-perfect web and mobile interfaces for international clients using React,
+Next.js, and Flutter.
+Translated client requirements into polished, responsive UIs with strong attention to detail, branding alignment,
+and cross-device compatibility.
+KEY PROJECTS
+W Omnichannel Hub (w-Hub) — SaaS Platform
+Built the Next.js web dashboard and Expo mobile app within a Turbo Monorepo, enabling shared logic across
+web and mobile clients.
+Implemented state management with Zustand and styled the entire UI using Tailwind CSS for a consistent,
+responsive design system.
+Delivered real-time chat inboxes and SLA alert interfaces powered by Socket.io, optimized for high-volume
+WhatsApp session management.
+Care Synq (e-Hub CRM) — Marketing & Clinic Operations
+Developed the cross-platform Flutter client (Web/iOS/Android) for managing full lead lifecycles with a unified,
+responsive UI.
+Built complex dynamic UI filters and interactive dashboards enabling real-time lead tracking and clinic
+operations management.
+Implemented complete AR/EN localization with RTL layout support, ensuring a seamless bilingual user
+experience.
+MetaTrader — Fintech Investment Platform
+Engineered the Next.js Admin dashboard (React 19, TanStack Query) for wealth management, portfolio
+tracking, and ROI reporting.
+Built the Flutter mobile app with Riverpod state management, featuring dual-language UI and Dark/Light mode
+theming.
+AIM — Investment Tracking Platform
+Developed the Next.js 16 responsive frontend with a mobile-first layout optimized for financial data
+visualization.
+Integrated next-intl for full bilingual (EN/AR) support and TanStack Query for real-time financial data rendering
+and caching.
+Clinova — Comprehensive Clinic Management System
+Architected intuitive user interfaces for patient bookings, appointment scheduling, and self-service clinic
+workflows.
+Designed comprehensive administrative dashboards for staff management, records oversight, and day-to-day
+clinic operations.
+Implemented role-based UI views ensuring tailored experiences for doctors, receptionists, and administrative
+personnel.
+EDUCATION
+October Technological University
+B.Sc. in Information Technology (CS Major) — 2024 – Expected 2028 (Currently in 3rd Year)
+WE Applied Technology School
+Diploma in Web Development & Programming — 2021 – 2024
+HONORS & CERTIFICATIONS
+2nd Place Nationwide in Software — Egypt Science and Engineering Fair (ESIF).
+Samsung Innovation Campus Certification.
+Multiple Certifications from BIM.
+
+===== Belal Moustafa — Full-Stack Software Engineer.pdf =====
+Belal Moustafa
+Full-Stack Software Engineer / Technical Lead
+ Cairo, Egypt  +20 115 716 7417 ✉ belalmoustafa65@gmail.com  github.com/BelalMoustafa
+ linkedin.com/in/belal-moustafa30
+PROFESSIONAL SUMMARY
+Results-driven Full-Stack Software Engineer and Technical Lead with over 3 years of experience
+architecting and delivering end-to-end, highly scalable systems. Demonstrated success in leading cross-
+functional teams of up to 15 members and deploying 55+ production projects handling 10,000+ concurrent
+users. Deep expertise in bridging robust backends (NestJS, Laravel, PostgreSQL) with modern, responsive
+frontends (Next.js, Flutter, Expo), alongside streamlining operations via Docker and CI/CD pipelines.
+SKILLS
+Core Stack: TypeScript, PHP, JavaScript, Dart, Java
+Backend & APIs: NestJS, Laravel, Node.js, RESTful APIs, Socket.io, Sanctum
+Frontend & Mobile: Next.js, React, Flutter, Expo, Tailwind CSS, Zustand, Riverpod
+Databases: PostgreSQL, MySQL, MongoDB, Redis, Prisma ORM
+DevOps & Architecture: Docker, GitHub Actions, Nginx, Linux (Ubuntu VPS), Monorepo (Turbo), Multi-tenant
+Architecture
+WORK EXPERIENCE
+Tarqumi — Technical Lead & Full-Stack Engineer Feb 2026 – Present
+Led full-stack architecture across a cross-functional team of 15 developers, overseeing end-to-end system
+design from database layer to client interfaces.
+Ensured seamless integration between complex APIs and frontend clients across 55+ production projects,
+maintaining consistency and reliability at scale.
+Implemented automated CI/CD pipelines via GitHub Actions and Docker, enabling rapid, zero-downtime
+deployments for platforms serving 10,000+ concurrent users.
+Ashour Group — Head of Software Team & Software Board Member Feb 2025 – May 2026
+Directed the full-stack technical roadmap, aligning frontend and backend development with business
+objectives and long-term product strategy.
+Standardized both frontend (React, Next.js) and backend (Laravel) development practices, establishing
+shared coding standards and architectural patterns.
+Led architectural reviews and code quality initiatives, ensuring high performance, security, and maintainability
+across all company products.
+Ashour Group — Full Stack Developer Dec 2024 – Feb 2025
+Developed and maintained full-stack applications using Laravel, Next.js, and PostgreSQL, delivering cohesive
+end-to-end product features.
+Integrated third-party APIs and payment gateways, ensuring seamless data flow between backend services
+and responsive client interfaces.
+7p — Backend Developer Jul 2024 – Oct 2024
+Engineered robust backend APIs and microservices using PHP/Laravel and MySQL.
+Streamlined data processing and API response times with Redis caching and optimized server configurations.
+Freelance — Software Engineer 2023 – Present
+Delivered custom end-to-end web and mobile solutions for international clients, covering database design, API
+development, and frontend implementation.
+Built complete product stacks using NestJS, Laravel, Next.js, and Flutter, with deployment on Linux VPS via
+Docker and Nginx.
+KEY PROJECTS
+W Omnichannel Hub (w-Hub) — SaaS Platform
+Built a multi-tenant WhatsApp SaaS using a NestJS, Next.js, and Expo Monorepo (Turbo). Implemented real-
+time Socket.io chat inboxes and configured robust RBAC with PostgreSQL and Prisma.
+Care Synq (e-Hub CRM) — Marketing & Clinic Operations
+Developed a modular multi-tenant Laravel backend and a cross-platform Flutter client. Automated activity
+lifecycles using Laravel Scheduler and Redis, with CI/CD via GitHub Actions.
+MetaTrader — Fintech Investment Platform
+Engineered a full-stack fintech platform combining a Laravel API, Next.js Admin dashboard, and Flutter Mobile
+App to manage real bank transfers and daily ROI cycles.
+AIM — Investment Tracking Platform
+Developed a bilingual (EN/AR) investment platform with a Next.js frontend and Laravel backend. Integrated
+multi-gateway payouts (PayMint, Binance) and automated withdrawal batches.
+Clinova — Comprehensive Clinic Management System
+Architected and built an end-to-end comprehensive clinic management system, from database design and
+secure APIs to intuitive patient booking interfaces.
+EDUCATION
+October Technological University
+B.Sc. in Information Technology (CS Major) — 2024 – Expected 2028 (Currently in 3rd Year)
+WE Applied Technology School
+Diploma in Web Development & Programming — 2021 – 2024
+HONORS & CERTIFICATIONS
+2nd Place Nationwide in Software — Egypt Science and Engineering Fair (ESIF).
+Samsung Innovation Campus Certification.
+Multiple Certifications from BIM.
+
+===== Belal Moustafa — Backend Software Engineer.pdf =====
+Belal Moustafa
+Backend Software Engineer / Technical Lead
+ Cairo, Egypt  +20 115 716 7417 ✉ belalmoustafa65@gmail.com  github.com/BelalMoustafa
+ linkedin.com/in/belal-moustafa30
+PROFESSIONAL SUMMARY
+Results-driven Backend Software Engineer and Technical Lead with over 3 years of experience in designing
+scalable architectures, RESTful APIs, and robust system infrastructures. Demonstrated success in leading
+engineering teams of up to 15 members and deploying 55+ production projects handling up to 10,000+
+concurrent users. Proficient in modern backend frameworks (NestJS, Laravel, TypeScript) with deep
+expertise in optimizing CI/CD pipelines, DevOps automation, and integrating complex multi-tenant systems.
+SKILLS
+Backend & Languages: TypeScript, PHP, JavaScript, Java, NestJS, Laravel, Node.js
+Frontend & Mobile: Next.js, React, Flutter, Expo
+Databases: PostgreSQL, MySQL, MongoDB, Redis, Prisma ORM
+DevOps & Infrastructure: Docker, GitHub Actions, Nginx, PM2, Linux (Ubuntu VPS), UFW, Fail2ban
+Architecture & Tools: Monorepo (Turbo), Socket.io, Odoo ERP Customization, Baileys (WhatsApp API), Sanctum,
+Multi-tenant Architecture
+WORK EXPERIENCE
+Tarqumi — Technical Lead & Backend Engineer Feb 2026 – Present
+Led a cross-functional software team of 15 developers, overseeing system architecture and technical delivery.
+Successfully deployed and managed over 55 production projects, implementing fast, automated CI/CD
+deployment pipelines to minimize downtime.
+Architected highly scalable systems, including a CRM/POS platform that seamlessly handled 10,000+
+concurrent users.
+Ashour Group — Head of Software Team & Software Board Member Feb 2025 – May 2026
+Led the engineering department and directed the technical roadmap, transitioning the team to agile
+methodologies and structured CI/CD workflows.
+Architected scalable backend solutions and conducted extensive code reviews, ensuring high performance
+and security standards across all company products.
+Ashour Group — Full Stack Developer Dec 2024 – Feb 2025
+Developed and maintained full-stack applications using Laravel, Next.js, and PostgreSQL, improving overall
+system responsiveness.
+Integrated third-party APIs and payment gateways, and optimized database queries to handle increasing data
+loads efficiently.
+7p — Backend Developer Jul 2024 – Oct 2024
+Engineered robust backend APIs and microservices using PHP/Laravel and MySQL.
+Streamlined data processing and improved API response times by implementing Redis caching and optimizing
+server configurations.
+Freelance — Software Engineer 2023 – Present
+Designed and delivered custom full-stack web applications and CRM systems for international clients using
+modern stacks (NestJS, Laravel, React).
+Handled end-to-end deployment on Linux VPS (Ubuntu) using Docker and Nginx.
+KEY PROJECTS
+W Omnichannel Hub (w-Hub) — SaaS Platform
+Built a multi-tenant WhatsApp management SaaS using a NestJS, Next.js, and Expo Monorepo (Turbo) with
+Baileys integration.
+Implemented real-time synchronization using Socket.io for chat inboxes, QR status, and SLA alerts.
+Configured robust RBAC, PostgreSQL with 18 Prisma models, and production CI/CD on a Linux VPS.
+Care Synq (e-Hub CRM) — Marketing & Clinic Operations
+Developed a modular multi-tenant Laravel backend and a cross-platform Flutter client for managing full lead
+lifecycles.
+Automated activity lifecycles using Laravel Scheduler with complex timezone handling and Redis caching.
+Hardened production infrastructure using Nginx, PM2, UFW, and GitHub Actions CI/CD.
+MetaTrader — Fintech Investment Platform
+Engineered a full-stack wealth management platform (Laravel API, Next.js Admin, Flutter App) managing real
+bank transfers and 12-month ROI cycles.
+Built a daily ROI engine with custom calendar rules and automated Excel/PPTX reporting modules.
+AIM — Investment Tracking Platform
+Developed a bilingual (EN/AR) investment management platform with Next.js and Laravel, deployed via GitHub
+Actions.
+Integrated multi-gateway payouts (PayMint API, Binance TRC20/BEP20, Bank Transfers) and automated
+withdrawal batches.
+Clinova — Comprehensive Clinic Management System
+Architected and developed a comprehensive B2B clinic management system covering bookings, patient
+records, and administrative dashboards.
+Built the backend infrastructure utilizing a modular framework, securing data endpoints, and ensuring high
+availability on production servers.
+Integrated robust relational databases and implemented role-based access control (RBAC) for varied medical
+staff permissions.
+EDUCATION
+October Technological University
+B.Sc. in Information Technology (CS Major) — 2024 – Expected 2028 (Currently in 3rd Year)
+WE Applied Technology School
+Diploma in Web Development & Programming — 2021 – 2024
+HONORS & CERTIFICATIONS
+2nd Place Nationwide in Software — Egypt Science and Engineering Fair (ESEF).
+Samsung Innovation Campus Certification.
+Multiple Certifications from BIM.

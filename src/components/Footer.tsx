@@ -1,32 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { GitHubIcon, LinkedInIcon } from "./ui/BrandIcons";
-import { getSetting, type ProfileSettings } from "@/lib/settings";
+import { defaultProfile, getSetting } from "@/lib/settings";
 
 export async function Footer() {
   const t = await getTranslations("footer");
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "",
-    titleAr: "",
-    locationEn: "",
-    locationAr: "",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "https://www.linkedin.com/in/belal-moustafa30/",
-    github: "https://github.com/BelalMoustafa",
-    companyUrl: "https://tarqumi.com",
-    photo: "/uploads/profile/belal-moustafa.png",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "/cv/belal-moustafa-cv-fullstack.html",
-    cvFrontend: "/cv/belal-moustafa-cv.html",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   return (
     <footer className="no-print border-t border-bm-border bg-bm-canvas">

@@ -1,29 +1,8 @@
 import { WhatsAppIcon } from "./ui/BrandIcons";
-import { getSetting, type ProfileSettings } from "@/lib/settings";
+import { defaultProfile, getSetting } from "@/lib/settings";
 
 export async function WhatsAppFloat() {
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "",
-    nameAr: "",
-    titleEn: "",
-    titleAr: "",
-    locationEn: "",
-    locationAr: "",
-    email: "",
-    phone: "",
-    phoneDisplay: "",
-    whatsapp: "201157167417",
-    linkedin: "",
-    github: "",
-    companyUrl: "",
-    photo: "",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "",
-    cvFrontend: "",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   return (
     <a

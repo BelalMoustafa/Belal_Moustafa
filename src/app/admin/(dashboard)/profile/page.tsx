@@ -1,31 +1,10 @@
-import { getSetting, type ProfileSettings } from "@/lib/settings";
+import { defaultProfile, getSetting } from "@/lib/settings";
 import { ProfileForm } from "./ProfileForm";
 
 export const metadata = { title: "Profile" };
 
 export default async function ProfileAdminPage() {
-  const profile = await getSetting<ProfileSettings>("profile", {
-    nameEn: "Belal Moustafa",
-    nameAr: "بلال مصطفى",
-    titleEn: "",
-    titleAr: "",
-    locationEn: "Cairo, Egypt",
-    locationAr: "القاهرة، مصر",
-    email: "belalmoustafa65@gmail.com",
-    phone: "+201157167417",
-    phoneDisplay: "+20 115 716 7417",
-    whatsapp: "201157167417",
-    linkedin: "",
-    github: "",
-    companyUrl: "https://tarqumi.com",
-    photo: "/uploads/profile/belal-moustafa.png",
-    availabilityEn: "",
-    availabilityAr: "",
-    summaryEn: "",
-    summaryAr: "",
-    cvFullstack: "/cv/belal-moustafa-cv-fullstack.html",
-    cvFrontend: "/cv/belal-moustafa-cv.html",
-  });
+  const profile = await getSetting("profile", defaultProfile);
 
   return (
     <div>
